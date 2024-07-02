@@ -1,3 +1,4 @@
+import Comment from "../components/Comment";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { BiEdit } from "react-icons/bi";
@@ -53,45 +54,8 @@ const PostDetails = () => {
         </div>
         <div className="flex flex-col mt-4">
           <h3 className="mt-6 mb-4 font-semibold">Comments:</h3>
-          {/*comment*/}
-          <div className="px-2 py-2 bg-gray-200 rounded-lg my-2">
-            <div className="flex items-center justify-between">
-              <h3 className="font-bold text-gray-600">@snehasish</h3>
-              <div className="flex justify-center items-center space-x-4">
-                <p className="text-gray-500 text-sm">30/06/2024</p>
-                <p className="text-gray-500 text-sm">13:06</p>
-                <div className="flex items-center justify-center space-x-2">
-                  <p>
-                    <BiEdit />
-                  </p>
-                  <p>
-                    <MdDelete />
-                  </p>
-                </div>
-              </div>
-            </div>
-            <p className="px-4 mt-2">Nice Information!!</p>
-          </div>
-
-          {/*comment*/}
-          <div className="px-2 py-2 bg-gray-200 rounded-lg my-2">
-            <div className="flex items-center justify-between">
-              <h3 className="font-bold text-gray-600">@snehasish</h3>
-              <div className="flex justify-center items-center space-x-4">
-                <p className="text-gray-500 text-sm">30/06/2024</p>
-                <p className="text-gray-500 text-sm">13:06</p>
-                <div className="flex items-center justify-center space-x-2">
-                  <p>
-                    <BiEdit />
-                  </p>
-                  <p>
-                    <MdDelete />
-                  </p>
-                </div>
-              </div>
-            </div>
-            <p className="px-4 mt-2">Nice Information!!</p>
-          </div>
+          <Comment />
+          <Comment />
         </div>
         {/*Write a comment*/}
         <div className="w-full flex flex-col mt-4 md:flex-row">
