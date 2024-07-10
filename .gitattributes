@@ -1,0 +1,9 @@
+# Set the default behavior to automatically normalize line endings.
+* text=auto
+
+# Explicitly declare text files to be normalized.
+*.js text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.env text eol=lf
+*.cmd text eol=lf
