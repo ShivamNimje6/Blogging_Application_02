@@ -1,10 +1,10 @@
-const express=require('express')
-const router=express.Router()
-const User=require('../models/User')
-const bcrypt=require('bcrypt')
-const Post=require('../models/Post')
-const Comment=require('../models/Comment')
-const verifyToken = require('../verifyToken')
+const express=require('express')// Import the express library
+const router=express.Router() // Create a new router object
+const User=require('../models/User') // Import the User model
+const bcrypt=require('bcrypt') // Import the bcrypt library for hashing passwords
+const Post=require('../models/Post') // Import the Post model
+const Comment=require('../models/Comment') // Import the Comment model
+const verifyToken = require('../verifyToken') // Import the verifyToken middleware
 
 
 //UPDATE

@@ -1,5 +1,6 @@
-const mongoose=require('mongoose')
+const mongoose=require('mongoose')// Import the mongoose library
 
+// Define the schema for a post
 const PostSchema=new mongoose.Schema({
     title:{
         type:String,
@@ -28,6 +29,7 @@ const PostSchema=new mongoose.Schema({
         type:Array,
         
     },
-},{timestamps:true})
+},{timestamps:true})// Automatically add createdAt and updatedAt timestamps
 
+// Export the Post model based on the PostSchema
 module.exports=mongoose.model("Post",PostSchema)
