@@ -8,10 +8,10 @@ const jwt=require('jsonwebtoken')
 //REGISTER
 router.post("/register",async(req,res)=>{
     try{
-        const {username,email,password}=req.body
-        const salt=await bcrypt.genSalt(10)
-        const hashedPassword=await bcrypt.hashSync(password,salt)
-        const newUser=new User({username,email,password:hashedPassword})
+        const {username,email,password}=req.body // Destructure the request body to get the username, email, and password
+        const salt=await bcrypt.genSalt(10) // Generate a salt for hashing the password
+        const hashedPassword=await bcrypt.hashSync(password,salt) // Hash the password with the generated salt
+        const newUser=new User({username,email,password:hashedPassword})// Create a new User instance with the provided data and hashed password
         const savedUser=await newUser.save()
         res.status(200).json(savedUser)
 
@@ -59,7 +59,7 @@ router.get("/logout",async (req,res)=>{
     }
 })
 
-//REFETCH USER
+//REFETCH USER information using the token
 router.get("/refetch", (req,res)=>{
     const token=req.cookies.token
     jwt.verify(token,process.env.SECRET,{},async (err,data)=>{

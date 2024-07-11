@@ -1,5 +1,6 @@
-const mongoose=require('mongoose')
+const mongoose=require('mongoose')// Import the mongoose library
 
+// Define the schema for a user
 const UserSchema=new mongoose.Schema({
     username:{
         type:String,
@@ -18,4 +19,5 @@ const UserSchema=new mongoose.Schema({
     }
 },{timestamps:true})
 
+// Export the User model based on the UserSchema
 module.exports=mongoose.model("User",UserSchema)
